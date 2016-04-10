@@ -1,0 +1,8 @@
+#!/bin/bash
+
+MYSQL=/usr/bin/mysql
+BACKUP_DIR="/vagrant/mysql"
+MYSQL_USER="root"
+MYSQL_PASSWORD="root"
+
+$MYSQL --user=$MYSQL_USER -p$MYSQL_PASSWORD phpmyadmin < "$BACKUP_DIR/phpmyadmin.sql"
